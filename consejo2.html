@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fondo de emergencia</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .header {
+            background-color: #34495e;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .content {
+            margin: 20px;
+        }
+
+        .content h2 {
+            color: #34495e;
+        }
+
+        .content p {
+            color: #666;
+        }
+
+        .content img {
+            width: 100%;
+            max-width: 600px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+
+        .back-button {
+            display: inline-block;
+            margin: 20px 0;
+            padding: 10px 20px;
+            background-color: #34495e;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .back-button:hover {
+            background-color: #2c3e50;
+        }
+
+        .accordion {
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 10px;
+            padding: 15px;
+            transition: transform 0.3s;
+            cursor: pointer;
+        }
+
+        .accordion:hover {
+            transform: translateY(-5px);
+        }
+
+        .panel {
+            padding: 0 15px;
+            display: none;
+            background-color: white;
+            overflow: hidden;
+        }
+
+        .panel.show {
+            display: block;
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var acc = document.getElementsByClassName("accordion");
+
+            for (var i = 0; i < acc.length; i++) {
+                acc[i].addEventListener("click", function () {
+                    this.classList.toggle("active");
+                    var panel = this.nextElementSibling;
+                    if (panel.style.display === "block") {
+                        panel.style.display = "none";
+                    } else {
+                        panel.style.display = "block";
+                    }
+                });
+            }
+        });
+    </script>
+</head>
+
+<body>
+    <div class="header">
+        <h1>Fondo de emergencia</h1>
+    </div>
+
+    <div class="content">
+        <h2>¿Qué es un fondo de emergencia?</h2>
+        <p>Un fondo de emergencia es una reserva de dinero que se guarda para cubrir gastos inesperados. Tener un fondo de emergencia te da tranquilidad y te ayuda a evitar deudas en caso de imprevistos.</p>
+        
+
+        <div class="accordion">Importancia de un fondo de emergencia</div>
+        <div class="panel">
+            <p>Un fondo de emergencia te permite enfrentar gastos imprevistos, como reparaciones de auto, emergencias médicas o pérdida de empleo, sin endeudarte.</p>
+            <img src="https://www.academiadeinversion.com/wp-content/uploads/2017/11/fondo-de-emergencia.png" alt="Ahorro">
+        </div>
+
+        <div class="accordion">Cómo crear un fondo de emergencia</div>
+        <div class="panel">
+            <p><strong>Paso 1:</strong> Establece una meta de ahorro. Lo ideal es tener de 3 a 6 meses de gastos cubiertos.</p>
+            <p><strong>Paso 2:</strong> Abre una cuenta de ahorros separada para tu fondo de emergencia.</p>
+            <p><strong>Paso 3:</strong> Ahorra regularmente. Incluye una partida en tu presupuesto para ahorrar una cantidad fija cada mes.</p>
+            <img src="https://peru21.pe/resizer/zPYoSQLkhffCwpv-Py1WSgccrwI=/980x528/smart/filters:format(jpeg):quality(75)/arc-anglerfish-arc2-prod-elcomercio.s3.amazonaws.com/public/GX47CWPHPVGS7HXZYUIIAF3MNM.jpg" alt="Ahorro">
+        </div>
+
+        <div class="accordion">Consejos para mantener tu fondo de emergencia</div>
+        <div class="panel">
+            <p><strong>Consejo 1:</strong> No uses tu fondo de emergencia para gastos no esenciales.</p>
+            <p><strong>Consejo 2:</strong> Revisa y ajusta tu fondo de emergencia anualmente para asegurarte de que sigue siendo suficiente.</p>
+            <img src="https://fastercapital.com/es/i-es/Consejos-para-mantener-la-salud-financiera-de-tu-startup--Tener-un-fondo-para-emergencias.webp" alt="Ahorro">
+        </div>
+
+        <a href="consejos_financieros.php" class="back-button">Volver a Consejos Financieros</a>
+    </div>
+</body>
+
+</html>

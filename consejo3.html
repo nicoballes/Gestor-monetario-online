@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reduce tus deudas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .header {
+            background-color: #34495e;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .content {
+            margin: 20px;
+        }
+
+        .content h2 {
+            color: #34495e;
+        }
+
+        .content p {
+            color: #666;
+        }
+
+        .content img {
+            width: 100%;
+            max-width: 600px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+
+        .back-button {
+            display: inline-block;
+            margin: 20px 0;
+            padding: 10px 20px;
+            background-color: #34495e;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .back-button:hover {
+            background-color: #2c3e50;
+        }
+
+        .accordion {
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 10px;
+            padding: 15px;
+            transition: transform 0.3s;
+            cursor: pointer;
+        }
+
+        .accordion:hover {
+            transform: translateY(-5px);
+        }
+
+        .panel {
+            padding: 0 15px;
+            display: none;
+            background-color: white;
+            overflow: hidden;
+        }
+
+        .panel.show {
+            display: block;
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var acc = document.getElementsByClassName("accordion");
+
+            for (var i = 0; i < acc.length; i++) {
+                acc[i].addEventListener("click", function () {
+                    this.classList.toggle("active");
+                    var panel = this.nextElementSibling;
+                    if (panel.style.display === "block") {
+                        panel.style.display = "none";
+                    } else {
+                        panel.style.display = "block";
+                    }
+                });
+            }
+        });
+    </script>
+</head>
+
+<body>
+    <div class="header">
+        <h1>Reduce tus deudas</h1>
+    </div>
+
+    <div class="content">
+        <h2>¿Cómo reducir tus deudas?</h2>
+        <p>Reducir tus deudas es fundamental para lograr estabilidad financiera. Aquí te presentamos algunas estrategias efectivas para lograrlo.</p>
+        
+        <div class="accordion">Prioriza tus deudas</div>
+        <div class="panel">
+            <p>Identifica cuáles de tus deudas tienen las tasas de interés más altas y enfócate en pagarlas primero. Esto te ayudará a ahorrar dinero en intereses a largo plazo.</p>
+            <img src="https://rostranyasociados.com/wp-content/uploads/2018/07/consolidar-tus-deudas-es-sinonimo-de-ahorrar-900x400.jpg" alt="Prioriza tus deudas">
+        </div>
+
+        <div class="accordion">Consolidación de deudas</div>
+        <div class="panel">
+            <p>Considera la posibilidad de consolidar tus deudas en un solo préstamo con una tasa de interés más baja. Esto puede hacer que tus pagos mensuales sean más manejables.</p>
+            <img src="https://www.eliytusfinanzas.com/wp-content/uploads/2016/07/consolidacion-deudas.png" alt="Consolidación de deudas">
+        </div>
+
+        <div class="accordion">Negocia con tus acreedores</div>
+        <div class="panel">
+            <p>Comunícate con tus acreedores para negociar mejores condiciones de pago. A veces, pueden ofrecerte tasas de interés más bajas o planes de pago más flexibles.</p>
+            <img src="https://koala.sh/api/image/v2-5v2zr-3qlkk.jpg?width=1216&height=832&dream" alt="Negociación con acreedores">
+        </div>
+
+        <div class="accordion">Consejos adicionales</div>
+        <div class="panel">
+            <p><strong>Consejo 1:</strong> No uses tu tarjeta de crédito para compras no esenciales mientras pagas tus deudas.</p>
+            <p><strong>Consejo 2:</strong> Revisa y ajusta tu plan de pago regularmente para asegurarte de que sigues en el buen camino.</p>
+            <img src="https://gestion.pe/resizer/en6qlkpn2W235KOxSz6Fq52Id9o=/580x330/smart/filters:format(jpeg):quality(75)/cloudfront-us-east-1.images.arcpublishing.com/elcomercio/IUA5M7SKCBBYJOL32HEUNYFXFA.jpg" alt="Consejos adicionales">
+        </div>
+
+        <a href="consejos_financieros.php" class="back-button">Volver a Consejos Financieros</a>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gastos impulsivos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .header {
+            background-color: #34495e;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .content {
+            margin: 20px;
+        }
+
+        .content h2 {
+            color: #34495e;
+        }
+
+        .content p {
+            color: #666;
+        }
+
+        .content img {
+            width: 100%;
+            max-width: 600px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+
+        .back-button {
+            display: inline-block;
+            margin: 20px 0;
+            padding: 10px 20px;
+            background-color: #34495e;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .back-button:hover {
+            background-color: #2c3e50;
+        }
+
+        .accordion {
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 10px;
+            padding: 15px;
+            transition: transform 0.3s;
+            cursor: pointer;
+        }
+
+        .accordion:hover {
+            transform: translateY(-5px);
+        }
+
+        .panel {
+            padding: 0 15px;
+            display: none;
+            background-color: white;
+            overflow: hidden;
+        }
+
+        .panel.show {
+            display: block;
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var acc = document.getElementsByClassName("accordion");
+
+            for (var i = 0; i < acc.length; i++) {
+                acc[i].addEventListener("click", function () {
+                    this.classList.toggle("active");
+                    var panel = this.nextElementSibling;
+                    if (panel.style.display === "block") {
+                        panel.style.display = "none";
+                    } else {
+                        panel.style.display = "block";
+                    }
+                });
+            }
+        });
+    </script>
+</head>
+
+<body>
+    <div class="header">
+        <h1>Gastos impulsivos</h1>
+    </div>
+
+    <div class="content">
+        <h2>¿Qué son los gastos impulsivos?</h2>
+        <p>Los gastos impulsivos son compras no planificadas que realizamos sin pensar en sus consecuencias a largo plazo. Estos gastos pueden afectar negativamente nuestras finanzas personales y evitar que alcancemos nuestras metas financieras.</p>
+
+        <div class="accordion">Identifica tus desencadenantes</div>
+        <div class="panel">
+            <p>Identificar las situaciones o emociones que te llevan a gastar impulsivamente es el primer paso para controlarlos. Mantén un diario de gastos para anotar cuándo y por qué haces compras impulsivas.</p>
+            <img src="https://chopra.com/cdn/shop/articles/10_Desencadenantes_Emocionales_Que_Estan_Retrasando_Tu_Verdadero_Proposito.jpg?v=1703108704&width=1920" alt="Identifica tus desencadenantes">
+        </div>
+
+        <div class="accordion">Crea un presupuesto y síguelo</div>
+        <div class="panel">
+            <p>Establece un presupuesto mensual que incluya un apartado para gastos discrecionales. Cumplir con este presupuesto te ayudará a controlar mejor tus finanzas y evitar gastos innecesarios.</p>
+            <img src="https://i0.wp.com/revistapyme21.cl/wp-content/uploads/2019/12/presupuesto.jpg?fit=1200%2C552&ssl=1" alt="Crea un presupuesto">
+        </div>
+
+        <div class="accordion">Usa la regla de las 24 horas</div>
+        <div class="panel">
+            <p>Si sientes la necesidad de hacer una compra impulsiva, espera 24 horas antes de realizarla. Este tiempo te permitirá reflexionar sobre si realmente necesitas el producto y evitar compras impulsivas.</p>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQM34JK-fw-ZcIy70J7vx_NVPFfw-qxZB9u-g&s" alt="Regla de las 24 horas">
+        </div>
+
+        <div class="accordion">Consejos adicionales</div>
+        <div class="panel">
+            <p><strong>Consejo 1:</strong> Evita llevar tarjetas de crédito contigo si no es necesario. Pagar en efectivo puede ayudarte a ser más consciente de tus gastos.</p>
+            <p><strong>Consejo 2:</strong> Mantén tus objetivos financieros en mente. Recordar tus metas a largo plazo puede ayudarte a resistir la tentación de gastar impulsivamente.</p>
+            
+        </div>
+
+        <a href="consejos_financieros.php" class="back-button">Volver a Consejos Financieros</a>
+    </div>
+</body>
+
+</html>
